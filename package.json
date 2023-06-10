@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "node server.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
