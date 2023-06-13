@@ -9,7 +9,9 @@ dotenv.config();
 
 const app = express();
 
-const PORT = 3000;
+const PORT = 4000;
+
+
 
 
 const db = new pg.Pool({
