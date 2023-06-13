@@ -1,24 +1,32 @@
 {
-  "name": "mvp-react1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "vite.config.js",
+  "name": "mvp",
+  "private": true,
+  "version": "0.0.0",
+  "main": "server.js",
   "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
-    "start": "node server.js",
+    "start": "node  backend/server.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@chakra-ui/react": "^2.7.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "framer-motion": "^10.12.16",
+    "nodemon": "^2.0.22",
+    "pg": "^8.11.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0",
-    "react-router-dom": "^6.12.1",
-    "vite": "^4.3.9"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
