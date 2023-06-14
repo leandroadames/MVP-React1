@@ -17,7 +17,7 @@ const App = () => {
     }
 
     getTasks()
-  }, [])
+  }, [tasks])
 
   // Fetch Tasks
   const fetchTasks = async () => {
@@ -54,6 +54,7 @@ const App = () => {
 
   // Delete Task
   const deleteTask = async (id) => {
+    console.log('deleteTask')
     const res = await fetch(`/api/todo/${id}`, {
       method: 'DELETE',
     })
@@ -68,7 +69,7 @@ const App = () => {
     const taskToToggle = await fetchTask(id)
     const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder }
 
-    const res = await fetch(`/api/todo${id}`, {
+    const res = await fetch(`/api/todo/${id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
