@@ -1,0 +1,16 @@
+                               List of databases
+     Name     |  Owner   | Encoding | Collate |  Ctype  |   Access privileges   
+--------------+----------+----------+---------+---------+-----------------------
+ apartmentlab | leo      | UTF8     | C.UTF-8 | C.UTF-8 | 
+ donuts_db    | leo      | UTF8     | C.UTF-8 | C.UTF-8 | 
+ leo          | leo      | UTF8     | C.UTF-8 | C.UTF-8 | 
+ pet          | leo      | UTF8     | C.UTF-8 | C.UTF-8 | 
+ petshop      | leo      | UTF8     | C.UTF-8 | C.UTF-8 | 
+ postgres     | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ template0    | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+              |          |          |         |         | postgres=CTc/postgres
+ template1    | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+              |          |          |         |         | postgres=CTc/postgres
+ todo         | leo      | UTF8     | C.UTF-8 | C.UTF-8 | 
+(9 rows)
+

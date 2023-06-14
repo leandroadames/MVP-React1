@@ -19,9 +19,19 @@ const db = new pg.Pool({
     user: "leo",
     host: "localhost",
     database: 'todo',
-    password: 'Uglyg00d',
+    password: "Uglyg00d",
     port: "5432"
 });
+
+db.connect();
+
+db.query(`SELECT * FROM TODO`, (err, res) => {
+    if (!err) {
+        console.log(res.rows)
+    } else {
+        throw err;
+    }
+})
 
 app.use(express.static("./public"));
 app.use(express.json());
@@ -29,7 +39,7 @@ app.use(cors());
 console.log("hello");
 // app.get
 app.get("/api/todo", (_, res) => {
-    console.log('first');
+    console.log('first get req');
     try {
         db.query("SELECT * FROM todo").then((data) => {
             res.json(data.rows);
@@ -49,7 +59,7 @@ app.get("/api/todo/:id", (req, res) => {
     }
     db.query("SELECT * FROM todo WHERE id = $1", [id]).then((result) => {
         if (result.rows.length === 0) {
-            res.sendStatus(404);
+            res.sendStatus(404, "in the get req failed");
         } else {
             res.send(result.rows[0]);
         }
